@@ -1,7 +1,8 @@
 {
   "name": "@shadow-software/dabdash-sdk",
-  "version": "0.0.0",
+  "version": "6.3.0",
   "description": "TypeScript SDK for the DabDash Tenant API",
+  "homepage": "https://dabdash.com/docs/api",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

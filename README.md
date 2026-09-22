@@ -12,14 +12,17 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/shadow-software/dabdash-sdk/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/shadow-software/dabdash-sdk?style=flat-square&color=8fd468"></a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square">
   <a href="https://shadowsoftware.com/"><img alt="Shadow Software" src="https://img.shields.io/badge/by-Shadow%20Software-8a8a8a?style=flat-square"></a>
 </p>
 
 <p align="center">
-  <b><a href="https://github.com/shadow-software/dabdash-sdk">GitHub →</a></b>
+  <b><a href="https://dabdash.com/">Platform</a></b>
   &nbsp;·&nbsp;
-  <a href="https://github.com/shadow-software/dabdash-php-sdk">PHP SDK</a>
+  <a href="https://dabdash.com/docs/api">API docs</a>
+  &nbsp;·&nbsp;
+  <a href="https://packagist.org/packages/shadow-software/dabdash-php-sdk">PHP SDK</a>
   &nbsp;·&nbsp;
   <a href="https://github.com/shadow-software/dabdash-for-woocommerce">WooCommerce plugin</a>
 </p>
@@ -28,12 +31,13 @@
 
 ## Install
 
+From GitHub (works today):
+
 ```bash
-npm install github:shadow-software/dabdash-sdk
+npm install github:shadow-software/dabdash-sdk#v6.3.0
 ```
 
-Git installs compile TypeScript through the package `prepare` script. When
-`@shadow-software/dabdash-sdk` is published to the public npm registry:
+On the public npm registry (first publish pending — use GitHub until then):
 
 ```bash
 npm install @shadow-software/dabdash-sdk
@@ -62,7 +66,8 @@ await client.callTool("/api/v1/dabdash/tenant/{slug}/tools/customer_lookup", {
 The OpenAPI surface is the tenant tool set (one POST per tool under
 `/api/v1/dabdash/tenant/{slug}/tools/…`). `src/generated/` is regenerated from
 the product OpenAPI spec — do not edit by hand. Releases are produced by
-[`shadow-software/sdk-release`](https://github.com/shadow-software/sdk-release).
+[`shadow-software/sdk-release`](https://github.com/shadow-software/sdk-release)
+via npm Trusted Publishing (GitHub OIDC).
 
 ## License
 
@@ -70,12 +75,13 @@ the product OpenAPI spec — do not edit by hand. Releases are produced by
 
 ---
 
-## Also by Shadow Software
+## DabDash ecosystem
 
 | | |
 |---|---|
-| [`shadow-software/dabdash-php-sdk`](https://github.com/shadow-software/dabdash-php-sdk) | DabDash Tenant API (PHP) |
-| [`@shadow-software/agt-sdk`](https://github.com/shadow-software/agt-sdk) | AGT Dealer API (TypeScript) |
+| [dabdash.com](https://dabdash.com) | Platform & tenant storefronts |
+| [API reference](https://dabdash.com/docs/api) | Tenant API docs & OpenAPI spec |
+| [`shadow-software/dabdash-php-sdk`](https://packagist.org/packages/shadow-software/dabdash-php-sdk) | PHP SDK (Packagist) |
 | [DabDash for WooCommerce](https://github.com/shadow-software/dabdash-for-woocommerce) | WordPress / WooCommerce sync plugin |
 
 <p align="center">
