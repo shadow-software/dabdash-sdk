@@ -57,6 +57,13 @@ await client.callTool("/api/v1/dabdash/tenant/{slug}/tools/customer_lookup", {
 });
 ```
 
+### Official sandbox smoke testing
+
+Use the private `DABDASH_SANDBOX_TOKEN` with tenant slug `shadow-sandbox` for
+SDK, plugin, or external-review smoke tests. Never commit that value; the
+platform preserves it while reconciling the synthetic tenant hourly. See the
+[official sandbox guide](https://dabdash.com/docs/official-sandbox).
+
 The OpenAPI surface is the tenant tool set (one POST per tool under
 `/api/v1/dabdash/tenant/{slug}/tools/…`). `src/generated/` is regenerated from
 the product OpenAPI spec — do not edit by hand. Releases are produced by
