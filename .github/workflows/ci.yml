@@ -1,0 +1,26 @@
+# Push/PR gate — build + smoke tests before release dispatch lands.
+#
+# Self-hosted CI (optional):
+#   gh variable set CI_RUNNER '["self-hosted","ci"]' -R shadow-software/dabdash-sdk
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    name: Build & smoke test
+    runs-on: ${{ fromJSON(vars.CI_RUNNER || '["ubuntu-latest"]') }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+
+      - run: npm ci
+      - run: npm test
