@@ -12,13 +12,15 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/shadow-software/dabdash-sdk/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/shadow-software/dabdash-sdk?style=flat-square&color=8fd468"></a>
+  <a href="https://www.npmjs.com/package/@shadow-software/dabdash-sdk"><img alt="npm" src="https://img.shields.io/npm/v/@shadow-software/dabdash-sdk?style=flat-square&color=8fd468"></a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square">
   <a href="https://shadowsoftware.com/"><img alt="Shadow Software" src="https://img.shields.io/badge/by-Shadow%20Software-8a8a8a?style=flat-square"></a>
 </p>
 
 <p align="center">
-  <b><a href="https://dabdash.com/">Platform</a></b>
+  <b><a href="https://www.npmjs.com/package/@shadow-software/dabdash-sdk">npm →</a></b>
+  &nbsp;·&nbsp;
+  <a href="https://dabdash.com/">Platform</a>
   &nbsp;·&nbsp;
   <a href="https://dabdash.com/docs/api">API docs</a>
   &nbsp;·&nbsp;
@@ -30,14 +32,6 @@
 ---
 
 ## Install
-
-From GitHub (works today):
-
-```bash
-npm install github:shadow-software/dabdash-sdk#v6.3.0
-```
-
-On the public npm registry (first publish pending — use GitHub until then):
 
 ```bash
 npm install @shadow-software/dabdash-sdk
