@@ -1,7 +1,7 @@
 # Push/PR gate — build + smoke tests before release dispatch lands.
 #
-# Self-hosted CI (optional):
-#   gh variable set CI_RUNNER '["self-hosted","ci"]' -R shadow-software/dabdash-sdk
+# Public repo: always GitHub-hosted (ubuntu-latest). Do NOT set CI_RUNNER —
+# org policy forbids self-hosted listeners on public repos (fork-PR RCE risk).
 name: CI
 
 on:
@@ -10,10 +10,14 @@ on:
   pull_request:
     branches: [master]
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     name: Build & smoke test
-    runs-on: ${{ fromJSON(vars.CI_RUNNER || '["ubuntu-latest"]') }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
 
